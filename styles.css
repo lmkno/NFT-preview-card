@@ -1,0 +1,133 @@
+:root {
+  /* Colors */
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line-color: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  /* Typography */
+  --body-font-family: "Outfit", sans-serif;
+  --heading-font-size: 2.4rem;
+  --paragraph-font-size: 1.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--paragraph-font-size);
+  background-color: var(--main-bg);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 5vw;
+}
+main .card {
+  color: var(--primary-soft-blue);
+  width: 350px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+main .card .image-container {
+  position: relative;
+  margin-bottom: 14px;
+}
+main .card .image-container div {
+  position: absolute;
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 50%);
+  width: 100%;
+  height: calc(100% - 4px);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+main .card .image-container div:hover {
+  opacity: 1;
+  cursor: pointer;
+  border-radius: 8px;
+}
+main .card .image-container div img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .card .nft-image {
+  width: 100%;
+  border-radius: 8px;
+}
+main .card .container h1 {
+  margin: 25px 0 15px;
+}
+main .card .container h1 a {
+  text-decoration: none;
+  color: var(--white);
+  font-size: var(--heading-font-size);
+}
+main .card .container h1 a:hover {
+  color: var(--primary-cyan);
+}
+main .card .container p {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+main .card .details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main .card .details .text-and-icon {
+  display: flex;
+  align-items: center;
+}
+main .card .details .text-and-icon img {
+  margin-right: 8px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid var(--line-color);
+  margin-bottom: 20px;
+}
+main .card .author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .card .author img {
+  width: 44px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 20px;
+}
+main .card .author a {
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+}
+main .card .author a:hover {
+  color: var(--primary-cyan);
+}
+footer {
+  font-size: 1.6rem;
+}
+
+footer a {
+  color: var(--primary-soft-blue);
+}
+
+footer a:hover {
+  color: var(--primary-cyan);
+}
